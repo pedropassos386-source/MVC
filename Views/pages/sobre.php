@@ -1,0 +1,1 @@
+<h1 style="color: green;"><?php echo $arr['titulo'];?></h1>
