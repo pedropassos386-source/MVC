@@ -1,6 +1,7 @@
 <?php
 
-    define('INCLUDE_PATH_FULL','http://localhost/MVC/Views/pages/css/');
+    define('INCLUDE_PATH_FULL','http://localhost/pedro-passos/html-e-css/MVC/Views/pages/css/');
+    define('INCLUDE_PATH','http://localhost/pedro-passos/html-e-css/MVC/');
     class Application{
         public function executar(){
             $url = isset($_GET['url']) ? explode('/' , $_GET['url'])[0] : 'Home';

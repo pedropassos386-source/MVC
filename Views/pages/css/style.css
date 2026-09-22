@@ -1,9 +1,261 @@
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background: black;
+/* Estrutura geral da página */
+
+html,
+body {
+    height: 100%;
 }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+.center {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+    width: 100%;
+    background-color: #222;
+}
+
+header .center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.logo h2 {
+    color: white;
+    font-size: 28px;
+}
+
+/* Menu */
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    color: #ccc;
+}
+
+/* =========================
+   CONTEÚDO
+   ========================= */
+
+main {
+    flex: 1;
+}
+
+/* =========================
+   CHAMADA
+   ========================= */
+
+.chamada {
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 50px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.chamada h2 {
+    font-size: 32px;
+    color: #222;
+    text-align: center;
+}
+
+/* =========================
+   SOBRE
+   ========================= */
+
+.sobre {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.sobre h2 {
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+    text-align: justify;
+}
+
+/* =========================
+   CONTATO
+   ========================= */
+
+.contato {
+    width: 90%;
+    max-width: 700px;
+    margin: 50px auto;
+}
+
+.contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contato input[type="text"],
+.contato textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    outline: none;
+}
+
+.contato input[type="text"]:focus,
+.contato textarea:focus {
+    border-color: #222;
+}
+
+.contato textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+.contato input[type="submit"] {
+    width: 150px;
+    padding: 12px 20px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    align-self: center;
+}
+
+.contato input[type="submit"]:hover {
+    background-color: #444;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    width: 100%;
+    background-color: #222;
+    color: white;
+    margin-top: auto;
+}
+
+footer .center {
+    padding: 40px 0;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-content h2 {
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+.footer-content p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.footer-copy {
+    border-top: 1px solid #444;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.footer-copy p {
+    margin: 0;
+    color: #aaa;
+    font-size: 13px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    header .center {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo h2 {
+        font-size: 24px;
+    }
+
+    .menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .chamada {
+        padding: 35px 0;
+    }
+
+    .chamada h2 {
+        font-size: 26px;
+    }
+
+    .sobre {
+        margin: 35px auto;
+    }
+
+    .sobre h2 {
+        font-size: 24px;
+    }
+
+    .sobre p {
+        font-size: 15px;
+    }
+
+    .contato {
+        margin: 35px auto;
+    }
+
+    .contato input[type="submit"] {
+        width: 100%;
+    }
+}
+

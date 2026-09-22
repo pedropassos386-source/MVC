@@ -1,5 +1,10 @@
 <?php
     $autoload = function($class){
+        if($class == 'Email'){
+            include('vendor/autoload.php');
+        }
+        
+        
         include($class.'.php');
     };
 
